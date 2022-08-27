@@ -1,0 +1,107 @@
+.order {
+    flex: 4;
+    padding: 20px;
+}
+
+.orderTitleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.orderContainer {
+    display: flex;
+    width: 100%;
+}
+
+.orderTop {
+    display: flex;
+    flex: 1;
+}
+
+.orderTopRight {
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.orderInfoTop {
+    display: flex;
+    align-items: center;
+}
+
+.orderName {
+    font-weight: 600;
+}
+
+.orderInfoBottom {
+    margin-top: 10px;
+}
+
+.orderInfoItem {
+    width: 150px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.orderInfoKey {
+    margin-right: 5px;
+}
+
+.orderInfoValue {
+    font-weight: 300;
+}
+
+.orderBottom {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.orderForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.orderFormLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.orderFormLeft > label {
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.orderFormLeft > input {
+    margin-bottom: 10px;
+    border: none;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.orderFormLeft > select {
+    margin-bottom: 10px;
+}
+
+.orderUpdateButton {
+    margin-top: 20px;
+    width: 200px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.orderMessage {
+    text-align: center;
+    color: green;
+    font-size: 18px;
+}
