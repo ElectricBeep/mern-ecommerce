@@ -43,7 +43,7 @@ const Success = () => {
     useEffect(() => {
         const createOrder = async () => {
             try {
-                const res = await userRequest.post("https://mernecommerce-backend.herokuapp.com/api/orders", {
+                const res = await userRequest.post("orders", {
                     userId: currentUser._id,
                     products: cart.products.map((item) => ({
                         productId: item._id,

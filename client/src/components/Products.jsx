@@ -20,8 +20,8 @@ const Products = ({ cat, filters, sort }) => {
             try {
                 const res = await axios.get(
                     cat
-                        ? `https://mernecommerce-backend.herokuapp.com/api/products?category=${cat}`
-                        : "https://mernecommerce-backend.herokuapp.com/api/products"
+                        ? `${process.env.REACT_APP_BASE_URL}products?category=${cat}`
+                        : `${process.env.REACT_APP_BASE_URL}products`
                 );
                 setProducts(res.data);
             } catch (err) {

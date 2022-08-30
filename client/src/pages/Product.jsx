@@ -175,7 +175,7 @@ const Product = () => {
     //Get product
     useEffect(() => {
         const getProduct = async () => {
-            const res = await publicRequest.get("https://mernecommerce-backend.herokuapp.com/api/products/find/" + productId);
+            const res = await publicRequest.get("products/find/" + productId);
             setProduct(res.data);
         };
         getProduct();

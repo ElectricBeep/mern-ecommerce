@@ -8,7 +8,7 @@ import { deleteOrderFailure, deleteOrderStart, deleteOrderSuccess, getOrdersFail
 export const login = async (dispatch, user) => {
     dispatch(loginStart());
     try {
-        const res = await publicRequest.post("/auth/login", user);
+        const res = await publicRequest.post("auth/login", user);
         dispatch(loginSuccess(res.data));
     } catch (err) {
         dispatch(loginFailure());
@@ -19,7 +19,7 @@ export const login = async (dispatch, user) => {
 export const getAllProducts = async (dispatch) => {
     dispatch(getProductsStart());
     try {
-        const res = await publicRequest.get("/products");
+        const res = await publicRequest.get("products");
         dispatch(getProductsSuccess(res.data));
     } catch (err) {
         dispatch(getProductsFailure());
@@ -30,7 +30,7 @@ export const getAllProducts = async (dispatch) => {
 export const deleteProduct = async (dispatch, id) => {
     dispatch(deleteProductsStart());
     try {
-        await userRequest.delete(`/products/${id}`);
+        await userRequest.delete(`products/${id}`);
         dispatch(deleteProductsSuccess(id));
     } catch (err) {
         dispatch(deleteProductsFailure());
@@ -41,7 +41,7 @@ export const deleteProduct = async (dispatch, id) => {
 export const updateProduct = async (dispatch, id, product) => {
     dispatch(updateProductsStart());
     try {
-        await userRequest.put(`/products/${id}`, product);
+        await userRequest.put(`products/${id}`, product);
         dispatch(updateProductsSuccess({ id: id, product: product }));
     } catch (err) {
         dispatch(updateProductsFailure());
@@ -52,7 +52,7 @@ export const updateProduct = async (dispatch, id, product) => {
 export const addProduct = async (dispatch, product) => {
     dispatch(addProductsStart());
     try {
-        const res = await userRequest.post("/products", product);
+        const res = await userRequest.post("products", product);
         dispatch(addProductsSuccess(res.data));
     } catch (err) {
         dispatch(addProductsFailure());
@@ -63,7 +63,7 @@ export const addProduct = async (dispatch, product) => {
 export const getAllUsers = async (dispatch) => {
     dispatch(getUsersStart());
     try {
-        const res = await userRequest.get("/users");
+        const res = await userRequest.get("users");
         dispatch(getUsersSuccess(res.data));
     } catch (err) {
         dispatch(getUsersFailure());
@@ -74,7 +74,7 @@ export const getAllUsers = async (dispatch) => {
 export const deleteUser = async (dispatch, id) => {
     dispatch(deleteUsersStart());
     try {
-        await userRequest.delete(`/users/${id}`);
+        await userRequest.delete(`users/${id}`);
         dispatch(deleteUsersSuccess(id));
     } catch (err) {
         dispatch(deleteUsersFailure());
@@ -85,7 +85,7 @@ export const deleteUser = async (dispatch, id) => {
 export const updateUser = async (dispatch, id, user) => {
     dispatch(updateUserStart());
     try {
-        await userRequest.put(`/users/${id}`, user);
+        await userRequest.put(`users/${id}`, user);
         dispatch(updateUserSuccess({ id: id, user: user }));
     } catch (err) {
         dispatch(updateUserFailure());
@@ -96,7 +96,7 @@ export const updateUser = async (dispatch, id, user) => {
 export const addUser = async (dispatch, user) => {
     dispatch(addUserStart());
     try {
-        const res = await publicRequest.post("/auth/register", user);
+        const res = await publicRequest.post("auth/register", user);
         dispatch(addUserSuccess(res.data));
     } catch (err) {
         dispatch(addUserFailure());
@@ -107,7 +107,7 @@ export const addUser = async (dispatch, user) => {
 export const getAllOrders = async (dispatch) => {
     dispatch(getOrdersStart());
     try {
-        const res = await userRequest.get("/orders");
+        const res = await userRequest.get("orders");
         dispatch(getOrdersSuccess(res.data));
     } catch (err) {
         dispatch(getOrdersFailure());
@@ -118,7 +118,7 @@ export const getAllOrders = async (dispatch) => {
 export const deleteOrder = async (dispatch, id) => {
     dispatch(deleteOrderStart());
     try {
-        await userRequest.delete(`/orders/${id}`);
+        await userRequest.delete(`orders/${id}`);
         dispatch(deleteOrderSuccess(id));
     } catch (err) {
         dispatch(deleteOrderFailure());
@@ -129,7 +129,7 @@ export const deleteOrder = async (dispatch, id) => {
 export const updateOrder = async (dispatch, id, order) => {
     dispatch(updateOrderStart());
     try {
-        await userRequest.put(`/orders/${id}`, order);
+        await userRequest.put(`orders/${id}`, order);
         dispatch(updateOrderSuccess({ id: id, order: order }));
     } catch (err) {
         dispatch(updateOrderFailure());

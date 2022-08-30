@@ -249,7 +249,7 @@ const Cart = () => {
     useEffect(() => {
         const makeRequest = async () => {
             try {
-                const res = await userRequest.post("https://mernecommerce-backend.herokuapp.com/api/checkout/payment", {
+                const res = await userRequest.post("checkout/payment", {
                     tokenId: stripeToken.id,
                     amount: cart.total * 100
                 });

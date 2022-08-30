@@ -29,7 +29,7 @@ export default function User() {
     useEffect(() => {
         const getUser = async () => {
             try {
-                const res = await userRequest.get(`/users/find/${userId}`);
+                const res = await userRequest.get(`users/find/${userId}`);
                 setUser(res.data);
             } catch (err) {
                 console.log(err);

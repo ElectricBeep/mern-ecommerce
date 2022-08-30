@@ -21,7 +21,7 @@ const Order = () => {
     useEffect(() => {
         const getOrder = async () => {
             try {
-                const res = await userRequest.get(`/orders/find/singleorder/${orderId}`);
+                const res = await userRequest.get(`orders/find/singleorder/${orderId}`);
                 setOrder(res.data);
             } catch (err) {
                 console.log(err);

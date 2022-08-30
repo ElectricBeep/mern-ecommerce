@@ -25,7 +25,7 @@ export default function Product() {
     useEffect(() => {
         const getProduct = async () => {
             try {
-                const res = await userRequest.get(`/products/find/${productId}`);
+                const res = await userRequest.get(`products/find/${productId}`);
                 setProduct(res.data);
             } catch (err) {
                 console.log(err);
